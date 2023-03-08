@@ -1,7 +1,7 @@
 ## 1. Memiliki Domain
 ![image(1)](https://user-images.githubusercontent.com/109075185/223764571-9a0eea31-3eca-4d03-95d0-1ffcdf2175ee.png)
 
-1. Belilah Domain Di idcloudhost.com atau dimanapun itu
+1. Belilah Domain Di [idcloudhost.com](https://idcloudhost.com/) atau dimanapun itu
 
 ## 2. Mengoneksikan domain ke cloudflare
 ### a. Add Site
