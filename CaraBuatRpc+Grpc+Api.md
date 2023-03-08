@@ -6,9 +6,9 @@
 ## 2. Mengoneksikan domain ke cloudflare
 ### a. Add Site
 ![image(2)](https://user-images.githubusercontent.com/109075185/223764856-154a5d68-80dd-4a18-81e5-788160e8a719.png)
-- **Masuk Kedalam https://cloudflare.com/**
-- **Lalu daftarkan akun kalian ke cloudflare**
-- **lalu tekan add a site**
+- Masuk Kedalam https://cloudflare.com/
+- Lalu daftarkan akun kalian ke cloudflare
+- lalu tekan add a site
 
 ## b. Register domain
 ![image(3)](https://user-images.githubusercontent.com/109075185/223765680-580983c9-a768-4719-a0b2-d863d5bb255a.png)
