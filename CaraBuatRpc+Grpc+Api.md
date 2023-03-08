@@ -180,7 +180,7 @@ https://rpc.planq.spt-node.xyz/
 ![image(17)](https://user-images.githubusercontent.com/109075185/223770127-7e76ac8c-9abe-4c7a-b33b-ab8fb7a6d00c.png)
 
 
-# NOTE: Rubah kata "planq" menjadi project yang kamu inginkan. 
+# NOTE: Rubah nama "planq" dan "planqd" menjadi nama project yang kamu sedang deploy RPC, GRPC, API nya. 
 
 Thanks To SPT-NODE.
 Credit: SPT-NODE
