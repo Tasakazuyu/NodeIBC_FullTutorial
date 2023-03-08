@@ -70,6 +70,22 @@
 - Matikan Proxy Status
 - Tekan Save
 
+## 4. Membuat Subdomain gRPC
+- Tekan add record lagi
+- pilih type CNAME
+- Name isi dengan grpc.planq 
+- target isi dengan planq-namadomainkamu.xyz
+- Matikan Proxy Status
+- Tekan Save
+
+## 5. Membuat Subdomain gRPC Web Configuration HTTP/2
+- Tekan add record lagi
+- pilih type CNAME
+- Name isi dengan grpcwc.planq 
+- target isi dengan planq-namadomainkamu.xyz
+- Matikan Proxy Status
+- Tekan Save
+
 ## 3. Konfigurasi Di Vps
 
 #### a. Instal alat dan bahan
@@ -163,7 +179,52 @@ server {
 ```
 ![image(14)](https://user-images.githubusercontent.com/109075185/223769381-6e4c7e10-fe7f-472a-a679-9cae6c9c86db.png)
 
-## f. Memasang ssl
+## f. Membuat Config gRPC
+
+**Masukan script berikut dan ubah sedikit seperti gambar di bawah ini**
+```
+server {
+    server_name grpc.planq.namadomainkamu.xyz;
+    listen 80;
+    location / {
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Max-Age 3600;
+        add_header Access-Control-Expose-Headers Content-Length;
+
+	proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header   Host             $host;
+
+         proxy_pass http://ip-node-kamu-yang-saya-suruh-simpan-baik-baik:1337;
+
+    }
+}
+```
+
+## g. Membuat Config gRPC Web Configuration HTTP/2
+
+**Masukan script berikut dan ubah sedikit seperti gambar di bawah ini**
+```
+server {
+    server_name grpcwc.planq.namadomainkamu.xyz;
+    listen 80;
+    location / {
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Max-Age 3600;
+        add_header Access-Control-Expose-Headers Content-Length;
+
+	proxy_set_header   X-Real-IP        $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header   Host             $host;
+
+         proxy_pass http://ip-node-kamu-yang-saya-suruh-simpan-baik-baik:1337;
+
+    }
+}
+```
+
+
+## h. Memasang ssl
 ```
 sudo certbot --nginx --register-unsafely-without-email
 sudo certbot --nginx --redirect
@@ -171,7 +232,7 @@ sudo certbot --nginx --redirect
 ![image(15)](https://user-images.githubusercontent.com/109075185/223769507-08e2e8de-1d7b-4800-bb5f-2697940ebf9f.png)
 1. lakukan pemasangan ssl kepada dua subdomain di atas dengan cara memasukan command diatas
 
-## g. Mengecek api dan rpc
+## i. Mengecek api dan rpc
 
 Masuk ke browser anda lalu cek subdomain yang kalian buat tadi seperti
 https://api.planq.spt-node.xyz/
@@ -179,6 +240,7 @@ https://api.planq.spt-node.xyz/
 https://rpc.planq.spt-node.xyz/
 ![image(17)](https://user-images.githubusercontent.com/109075185/223770127-7e76ac8c-9abe-4c7a-b33b-ab8fb7a6d00c.png)
 
+## NOTE: gRPC dan gRPC Web Configurationnya belum dibuatin contoh jadi, tapi kurang lebih sama tutornya kaya RPC, dan sudah pasti berhasil
 
 # NOTE: Rubah nama "planq" dan "planqd" menjadi nama project yang kamu sedang deploy RPC, GRPC, API nya. 
 
