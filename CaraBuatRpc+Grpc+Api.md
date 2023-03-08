@@ -240,7 +240,7 @@ https://api.planq.spt-node.xyz/
 https://rpc.planq.spt-node.xyz/
 ![image(17)](https://user-images.githubusercontent.com/109075185/223770127-7e76ac8c-9abe-4c7a-b33b-ab8fb7a6d00c.png)
 
-## NOTE: gRPC dan gRPC Web Configurationnya belum dibuatin contoh jadi, tapi kurang lebih sama tutornya kaya RPC, dan sudah pasti berhasil
+-  **NOTE: gRPC dan gRPC Web Configurationnya belum dibuatin contoh jadi, tapi kurang lebih sama tutornya kaya RPC, dan sudah pasti berhasil**
 
 # NOTE: Rubah nama "planq" dan "planqd" menjadi nama project yang kamu sedang deploy RPC, GRPC, API nya. 
 
