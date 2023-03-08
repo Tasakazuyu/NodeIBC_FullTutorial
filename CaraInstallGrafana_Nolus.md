@@ -2501,3 +2501,5 @@ http://ipserver:9999/login
 **then hit import**
 
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/61777095/223363907-ff54451f-ca4a-401f-855c-5fc2ba7733d4.png">
+
+### NOTE: Kalau pake GCP, Azure, DO atau VPS lainya usahakan open port di panel (website) nya mereka
