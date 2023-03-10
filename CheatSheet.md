@@ -1,3 +1,10 @@
+## CHEAT SHEET VALIDATOR, GANTI KATA "seid" DENGAN PROJECT YANG SEDANG SEKARANG KAMU KERJAKAN, JANGAN LUPA TAMBAHKAN HURUF "D" DI BELAKANGNYA.
+## CONTOH HURUF "D" DI BELAKANG SEPERTI: seid (sei), quicksilverd (quicksilver), stride (strided), dll.
+
+
+
+
+
 ### Get list of validators
 ```
 seid q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
