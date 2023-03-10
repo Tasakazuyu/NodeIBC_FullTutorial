@@ -24,7 +24,7 @@ rm -rf build
 cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
-cd nolus-core
+cd quicksilver
 git checkout v1.2.4
 make install
 
